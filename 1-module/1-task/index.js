@@ -10,7 +10,7 @@ function factorial(n) {
     return fc;
   }  
 }
-console.log('---------------');
-console.log(factorial(0));
-console.log(factorial(1));
-console.log(factorial(5));
+//console.log('---------------');
+//console.log(factorial(0));
+//console.log(factorial(1));
+//console.log(factorial(5));

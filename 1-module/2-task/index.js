@@ -16,7 +16,7 @@ https://www.regular-expressions.info/javascript.html
  */   
 function isValid(name) {
  // для отдельного символа можно еще и так// if (name.indexOf(' ') > -1) {return false;}  
-  if ( ! /^[a-zA-Z0-9]+$/.test(name) || name==null || name.length<4 ) {return false;}
+  if ( ! /^[a-zA-Z0-9а-яА-Я]+$/.test(name) || name==null || name.length<4 ) {return false;}
   else {return true;}
 }
 
