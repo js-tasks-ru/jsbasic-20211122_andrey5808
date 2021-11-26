@@ -13,11 +13,11 @@ function print(text) {
     // Validation failed
 }
 https://www.regular-expressions.info/javascript.html
+if ( ! /^[a-zA-Z0-9а-яА-Я]+$/.test(name) || name==null || name.length<4 ) {return false;}
  */   
 function isValid(name) {
  // для отдельного символа можно еще и так// if (name.indexOf(' ') > -1) {return false;}  
-  if ( ! /^[a-zA-Z0-9а-яА-Я]+$/.test(name) || name==null || name.length<4 ) {return false;}
-  else {return true;}
+  return !!name && !name.includes(' ') && name.length >= 4
 }
 
 function sayHello() {
