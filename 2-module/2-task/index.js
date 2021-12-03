@@ -1,3 +1,4 @@
 function isEmpty(obj) {
-  // ваш код...
+  for (propName in obj) { return false;} //object is not empty
+  return true;
 }
