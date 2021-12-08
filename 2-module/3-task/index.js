@@ -13,6 +13,6 @@ let calculator = {
 window.calculator = calculator; // делает ваш калькулятор доступным глобально
 
 
-calculator.read(3, 5);
-console.log(calculator.sum()); // 8
-console.log(calculator.mul()); // 15
+//calculator.read(3, 5);
+//console.log(calculator.sum()); // 8
+//console.log(calculator.mul()); // 15
