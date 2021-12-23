@@ -8,8 +8,7 @@ function initCarousel() {
  
   const slide=document.querySelector('.carousel__inner') ;  //  .firstElementChild    .children[0]
 
-  const slideWidthR =  '-'+slide.offsetWidth+'px';
-  const slideWidthL = slide.offsetWidth+'px';
+   
  
   
   let slideCounter=1;
@@ -20,7 +19,7 @@ function initCarousel() {
     arrowLeft.style.display = "";
     
     if ( slideCounter<4)  {arrowRight.style.display = "";
-    slide.style.transform += `translateX( ${slideWidthR})` ;
+    slide.style.transform += `translateX( -${slide.offsetWidth}px)` ;
     slideCounter++;
     console.log ('slideCounter='+slideCounter);
       } 
@@ -32,7 +31,7 @@ function initCarousel() {
       arrowRight.style.display = "";
    
     if ( slideCounter>1)  {arrowLeft.style.display = "";
-    slide.style.transform += `translateX( ${slideWidthL})` ;  
+    slide.style.transform += `translateX( ${slide.offsetWidth}px)` ;  
     slideCounter--;
     console.log ('slideCounter='+slideCounter);
       }   
