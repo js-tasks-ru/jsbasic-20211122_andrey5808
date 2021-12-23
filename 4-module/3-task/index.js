@@ -28,7 +28,7 @@ function highlight(table) {
   } else if (available==='false') {
     rows[i].classList.add('unavailable'); 
   }else if (available===null) {
-    rows[i].classList.add('hidden');  //  а как добаввить атрибут а не класс ???
+    //rows[i].classList.add('hidden');  //  а как добаввить атрибут а не класс ???
     rows[i].hidden = true;
   }
     
