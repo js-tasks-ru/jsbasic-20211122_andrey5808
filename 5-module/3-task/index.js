@@ -8,38 +8,35 @@ function initCarousel() {
  
   const slide=document.querySelector('.carousel__inner') ;  //  .firstElementChild    .children[0]
 
-   
+  //document.querySelector('.carousel__inner').offsetWidth  //document.querySelector('.carousel__inner').children.length;
  
-  
-  let slideCounter=1;
+  maxSlide=slide.children.length; // 4 слайда
+  let slideCounter=0;
   arrowLeft.style.display = "none"; //по умолчанию левая кнопка должна быть скрыта т.к. мы на первом слайде 
   
 
   function arrowRightClicker() {
     arrowLeft.style.display = "";
     
-    if ( slideCounter<4)  {arrowRight.style.display = "";
-    slide.style.transform += `translateX( -${slide.offsetWidth}px)` ;
+    if ( slideCounter<maxSlide)  {arrowRight.style.display = "";
     slideCounter++;
-    console.log ('slideCounter='+slideCounter);
+    slide.style.transform =  `translateX( -${slideCounter * slide.offsetWidth}px)` ;     
+    //console.log ('slideCounter='+slideCounter);
       } 
-      if ( slideCounter>=4)   {arrowRight.style.display = "none"}; 
+      if ( slideCounter>=maxSlide-1)   {arrowRight.style.display = "none"}; 
    
   }  
  
   function arrowLeftClicker() {
       arrowRight.style.display = "";
    
-    if ( slideCounter>1)  {arrowLeft.style.display = "";
-    slide.style.transform += `translateX( ${slide.offsetWidth}px)` ;  
+    if ( slideCounter>0)  {arrowLeft.style.display = "";
     slideCounter--;
-    console.log ('slideCounter='+slideCounter);
+    slide.style.transform =  `translateX( -${slideCounter * slide.offsetWidth}px)` ;     
+    //console.log ('slideCounter='+slideCounter);
       }   
-      if ( slideCounter<=1)   {arrowLeft.style.display = "none"}; 
+      if ( slideCounter==0)   {arrowLeft.style.display = "none"}; 
    
 
-  }  
-
-
-
+  }
 }
