@@ -8,13 +8,13 @@ function initCarousel() {
  
   const slide=document.querySelector('.carousel__inner') ;  //  .firstElementChild    .children[0]
 
-  const slideWidthR = '-'+slide.offsetWidth+'px';
+  const slideWidthR =  '-'+slide.offsetWidth+'px';
   const slideWidthL = slide.offsetWidth+'px';
  
   
   let slideCounter=1;
-  arrowLeft.style.display == "none"; //по умолчанию левая кнопка должна быть скрыта т.к. мы на первом слайде 
-  //и чего оно не скрывается?!
+  arrowLeft.style.display = "none"; //по умолчанию левая кнопка должна быть скрыта т.к. мы на первом слайде 
+  
 
   function arrowRightClicker() {
     arrowLeft.style.display = "";
